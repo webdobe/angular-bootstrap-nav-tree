@@ -230,7 +230,7 @@
             }
             return _results;
           };
-          scope.$watch('treeData', on_treeData_changbe, true);
+          scope.$watch('treeData', on_treeData_change, true);
           if (scope.initialSelection != null) {
             for_each_branch(function(b) {
               if (b === scope.initialSelection || b.label === scope.initialSelection) {
