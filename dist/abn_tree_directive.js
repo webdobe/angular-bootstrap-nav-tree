@@ -13,7 +13,7 @@
         scope: {
           treeData: '=',
           onSelect: '&',
-          initialSelection: '@',
+          initialSelection: '=',
           treeControl: '='
         },
         link: function(scope, element, attrs) {
@@ -231,9 +231,9 @@
             return _results;
           };
           scope.$watch('treeData', on_treeData_change, true);
-          if (attrs.initialSelection != null) {
+          if (scope.initialSelection != null) {
             for_each_branch(function(b) {
-              if (b.label === attrs.initialSelection) {
+              if (b.label === scope.initialSelection) {
                 return $timeout(function() {
                   return select_branch(b);
                 });
