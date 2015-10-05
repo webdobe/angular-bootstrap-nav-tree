@@ -233,7 +233,7 @@
           scope.$watch('treeData', on_treeData_change, true);
           if (scope.initialSelection != null) {
             for_each_branch(function(b) {
-              if (b === scope.initialSelection || b.label === scope.initialSelection) {
+              if (b.label === scope.initialSelection) {
                 return $timeout(function() {
                   return select_branch(b);
                 });
